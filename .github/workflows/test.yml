@@ -22,13 +22,13 @@ jobs:
         distribution: 'zulu' 
         java-version: '17'  
 
-    - name: Cache Gradle packages
-      uses: actions/cache@v3
-      with:
-        path: ~/.gradle/caches
-        key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-        restore-keys: |
-          gradle-${{ runner.os }}-
+    # - name: Cache Gradle packages
+    #   uses: actions/cache@v3
+    #   with:
+    #     path: ~/.gradle/caches
+    #     key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+    #     restore-keys: |
+    #       gradle-${{ runner.os }}-
 
     - name: Build and Test
       run: ./gradlew clean test
