@@ -19,8 +19,8 @@ jobs:
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
-        distribution: 'zulu' # OpenJDKのディストリビューション
-        java-version: '17'   # Androidプロジェクトで一般的なJavaバージョン
+        distribution: 'zulu' 
+        java-version: '17'  
 
     - name: Cache Gradle packages
       uses: actions/cache@v3
